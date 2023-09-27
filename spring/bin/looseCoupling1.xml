@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+ <bean id="student" class="looseCoupling.Student">
+ 
+ <!-- <property name="Cheat" ref="MathCheatObjectValue"/> -->
+ 
+ <!--  <property name="Cheat" ref="ScienceCheatObjectValue" /> -->
+ 
+  <!--  <property name="Cheat" ref="JavaCheatObjectValue"/> -->
+  
+  <property name="Cheat" ref="SpringCheatObjectValue"/>
+ 
+ </bean>   
+      
+  <bean id="MathCheatObjectValue" class="looseCoupling.MathCheat"/>
+  
+  <bean id="ScienceCheatObjectValue" class="looseCoupling.ScienceCheat"/>
+  
+  <bean id="JavaCheatObjectValue" class="looseCoupling.JavaCheat"/>
+  
+  <bean id="SpringCheatObjectValue" class="looseCoupling.SpringCheat"/>
+     
+</beans>

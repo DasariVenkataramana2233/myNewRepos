@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+     
+     
+        
+ <bean id="student" class="ObjectInjection.Student">
+ 
+ <property name="id" value="10"/>
+ 
+ <property name="mathCheat" ref="mathObject">
+ 
+ <!-- <bean class="ObjectInjection.MathCheat" />  we can inject directly class also but this is bad approach -->
+ 
+ </property>
+ 
+ </bean>
+ 
+ <bean id="mathObject" class="ObjectInjection.MathCheat" />
+ 
+ 
+<bean id="anotherstudent" class="ObjectInjection.AnotherStudent">
+<property name="cheat" ref="mathObject"></property>
+</bean>
+ 
+ </beans>

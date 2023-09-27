@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <!-- Basic bean acess in this for separate separate classes 
+    
+    <bean id="airtel" class="basicspringinto.Airtel"></bean>
+    
+    <bean id="vodafone" class="basicspringinto.Vodafone"></bean>
+    
+    
+    -->
+    
+    <!-- Beans using sim interface -->
+    
+     <bean id="sim" class="basicspringinto.Airtel"></bean>
+     <bean id="sim1" class="basicspringinto.Vodafone"></bean>
+     <bean id="jio" class="basicspringinto.Jio"></bean>
+     <bean id="bsnl" class="basicspringinto.BSNL"/>
+
+</beans>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+<!-- you can always change autowire according to the rules -->
+<!--  
+<bean id="employee" class="autowiring.Employee" autowire="no">
+
+<property name="empId" ><value type="int">235</value></property>
+<property name="eName"><value>Rajan</value></property>
+<property name="sal"><value type="double">2332.003</value></property>
+
+</bean>
+
+ -->
+ 
+<!-- when property name(companyName,companyName) both are same use byName in above -->
+
+<!--  
+
+<bean id="companyName" class="autowiring.CompanyName">
+<property name="Name"><value>AtosSyntel</value></property>
+</bean>
+
+-->
+
+<!-- when property name(companyName,companyName1) both are different use byType in above -->
+
+<!-- 
+
+<bean id="companyName1" class="autowiring.CompanyName">
+<property name="Name"><value>AtosSyntel</value></property>
+</bean>
+
+-->
+
+
+
+<bean id="employee" class="autowiring.Employee" autowire="constructor">
+
+<constructor-arg value="132" type="int"></constructor-arg>
+<constructor-arg><value>rana</value></constructor-arg>
+<constructor-arg value="3434.34" type="double"></constructor-arg>
+
+
+</bean>
+
+<bean id="companyName" class="autowiring.CompanyName">
+
+<constructor-arg><value>Eviden</value></constructor-arg>
+
+</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>
